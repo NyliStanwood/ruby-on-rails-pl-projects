@@ -1,0 +1,899 @@
+Started GET "/" for 127.0.0.1 at 2017-09-15 16:40:00 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/nyli/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/nyli/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.7ms)
+Completed 200 OK in 396ms (Views: 15.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-15 18:43:40 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/nyli/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/nyli/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (5.0ms)
+Completed 200 OK in 423ms (Views: 17.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-15 18:56:10 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/nyli/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/nyli/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (5.1ms)
+Completed 200 OK in 342ms (Views: 15.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-15 21:08:20 -0400
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (133.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (122.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTracks (20170916010307)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "tracks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "album" varchar, "artist" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170916010307"]]
+  [1m[35m (129.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-16 01:30:54.213200"], ["updated_at", "2017-09-16 01:30:54.213200"]]
+  [1m[35m (122.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-09-15 21:31:18 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/nyli/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/nyli/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.5ms)
+Completed 200 OK in 49ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-15 22:36:29 -0400
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/application
+  [1m[36mTrack Load (0.8ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered tracks/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 2423ms (Views: 2397.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/tracks/new" for 127.0.0.1 at 2017-09-15 22:45:43 -0400
+Processing by TracksController#new as HTML
+  Rendering tracks/new.html.erb within layouts/application
+  Rendered tracks/_form.html.erb (125.2ms)
+  Rendered tracks/new.html.erb within layouts/application (155.3ms)
+Completed 200 OK in 272ms (Views: 242.8ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/tracks" for 127.0.0.1 at 2017-09-15 22:46:07 -0400
+Processing by TracksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uVUTFYUFZBG2/9/7A0f0ngbg8xEFZVJGk7o2y6gRHRK+graEFgRo8w7x00LLJsIXUw29sad/glHxT2pp/DzINA==", "track"=>{"title"=>"Justice for all", "album"=>"Justice for all", "artist"=>"Metallica"}, "commit"=>"Create Track"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "album", "artist", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Justice for all"], ["album", "Justice for all"], ["artist", "Metallica"], ["created_at", "2017-09-16 02:46:07.922746"], ["updated_at", "2017-09-16 02:46:07.922746"]]
+  [1m[35m (427.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tracks/1
+Completed 302 Found in 440ms (ActiveRecord: 431.1ms)
+
+
+Started GET "/tracks/1" for 127.0.0.1 at 2017-09-15 22:46:08 -0400
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (1.9ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tracks/show.html.erb within layouts/application
+  Rendered tracks/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 207ms (Views: 100.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-15 22:54:58 -0400
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/application
+  [1m[36mTrack Load (3.0ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered tracks/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 111ms (Views: 94.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/tracks/new" for 127.0.0.1 at 2017-09-15 22:55:23 -0400
+Processing by TracksController#new as HTML
+  Rendering tracks/new.html.erb within layouts/application
+  Rendered tracks/_form.html.erb (5.9ms)
+  Rendered tracks/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 115ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tracks" for 127.0.0.1 at 2017-09-15 22:55:47 -0400
+Processing by TracksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0GwDF+NPTIDbe+Cgm4XRJQZFwrY8o86QfaAlNl5lyXjXu6aGcE5AYmN17BlT5OesU6iMFp65HocfVXmUCkgcXg==", "track"=>{"title"=>"Enter Sandman", "album"=>"Metallica", "artist"=>"Metallica"}, "commit"=>"Create Track"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.9ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "album", "artist", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Enter Sandman"], ["album", "Metallica"], ["artist", "Metallica"], ["created_at", "2017-09-16 02:55:47.832142"], ["updated_at", "2017-09-16 02:55:47.832142"]]
+  [1m[35m (243.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tracks/2
+Completed 302 Found in 253ms (ActiveRecord: 247.9ms)
+
+
+Started GET "/tracks/2" for 127.0.0.1 at 2017-09-15 22:55:48 -0400
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrack Load (0.9ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tracks/show.html.erb within layouts/application
+  Rendered tracks/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 95ms (Views: 84.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-15 22:58:26 -0400
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/application
+  [1m[36mTrack Load (2.0ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered tracks/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 85ms (Views: 75.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-15 22:58:29 -0400
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tracks/edit.html.erb within layouts/application
+  Rendered tracks/_form.html.erb (3.0ms)
+  Rendered tracks/edit.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 114ms (Views: 106.4ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-15 23:06:47 -0400
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dyk+Fb9w/5LIylShKFTYdUlHZKywHF3RcKJMvK3yNnDZERkF5aX1JU+weO7Oi3zW9Qj4NPEL0v3LHRcqkudZTA==", "track"=>{"title"=>"Justice for all", "album"=>"Justice for all", "artist"=>"Metallica!!"}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (30.7ms)[0m  [1m[33mUPDATE "tracks" SET "artist" = ?, "updated_at" = ? WHERE "tracks"."id" = ?[0m  [["artist", "Metallica!!"], ["updated_at", "2017-09-16 03:06:47.843811"], ["id", 1]]
+  [1m[35m (158.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tracks/1
+Completed 302 Found in 426ms (ActiveRecord: 189.8ms)
+
+
+Started GET "/tracks/1" for 127.0.0.1 at 2017-09-15 23:06:48 -0400
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (1.1ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tracks/show.html.erb within layouts/application
+  Rendered tracks/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 111ms (Views: 101.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-15 23:38:56 -0400
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/application
+  [1m[36mTrack Load (0.8ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered tracks/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 193ms (Views: 132.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tracks/new" for 127.0.0.1 at 2017-09-15 23:38:58 -0400
+Processing by TracksController#new as HTML
+  Rendering tracks/new.html.erb within layouts/application
+  Rendered tracks/_form.html.erb (7.4ms)
+  Rendered tracks/new.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 142ms (Views: 129.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tracks" for 127.0.0.1 at 2017-09-15 23:39:16 -0400
+Processing by TracksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/MK+DeV81JRYXZQQtAir4w+1tK7b2h1tu1sV8EwVRTX7FRucdn3YduBTmKl8aZ1qWlj6DnnAzXrZrklSGDiQEw==", "track"=>{"title"=>"deleteme", "album"=>"I dont wanna be here", "artist"=>"meeee"}, "commit"=>"Create Track"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (125.0ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "album", "artist", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "deleteme"], ["album", "I dont wanna be here"], ["artist", "meeee"], ["created_at", "2017-09-16 03:39:16.087952"], ["updated_at", "2017-09-16 03:39:16.087952"]]
+  [1m[35m (392.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tracks/3
+Completed 302 Found in 524ms (ActiveRecord: 518.0ms)
+
+
+Started GET "/tracks/3" for 127.0.0.1 at 2017-09-15 23:39:16 -0400
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTrack Load (2.4ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tracks/show.html.erb within layouts/application
+  Rendered tracks/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 91ms (Views: 74.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-15 23:39:20 -0400
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/application
+  [1m[36mTrack Load (0.8ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered tracks/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 174ms (Views: 161.2ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/tracks/3" for 127.0.0.1 at 2017-09-15 23:39:25 -0400
+Processing by TracksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"N66IbNxxXNM12LvK1N6yPC+fujPhE+iufleGyhFwcs+7uQy82rCB4264R5gmaB8smXAKKKWtpngddmpg9IGWjA==", "id"=>"3"}
+  [1m[36mTrack Load (0.7ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[31mDELETE FROM "tracks" WHERE "tracks"."id" = ?[0m  [["id", 3]]
+  [1m[35m (170.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tracks
+Completed 302 Found in 179ms (ActiveRecord: 173.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-15 23:39:25 -0400
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/application
+  [1m[36mTrack Load (2.7ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered tracks/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 112ms (Views: 97.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-16 01:10:36 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/nyli/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/nyli/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (12.5ms)
+Completed 200 OK in 129ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-16 01:11:47 -0400
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/application
+  [1m[36mTrack Load (59.9ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered tracks/index.html.erb within layouts/application (103.5ms)
+Completed 200 OK in 1442ms (Views: 1333.2ms | ActiveRecord: 64.8ms)
+
+
+Started GET "/tracks/new" for 127.0.0.1 at 2017-09-16 01:11:58 -0400
+Processing by TracksController#new as HTML
+  Rendering tracks/new.html.erb within layouts/application
+  Rendered tracks/_form.html.erb (139.5ms)
+  Rendered tracks/new.html.erb within layouts/application (185.6ms)
+Completed 200 OK in 279ms (Views: 265.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-16 01:12:01 -0400
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/application
+  [1m[36mTrack Load (1.0ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered tracks/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 108ms (Views: 96.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-16 01:12:03 -0400
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.9ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tracks/edit.html.erb within layouts/application
+  Rendered tracks/_form.html.erb (7.0ms)
+  Rendered tracks/edit.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 180ms (Views: 146.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-16 01:12:05 -0400
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/application
+  [1m[36mTrack Load (1.7ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered tracks/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 101ms (Views: 89.9ms | ActiveRecord: 1.7ms)
+
+
+  [1m[35m (17.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "tracks"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "tracks"[0m
+  [1m[36mTrack Load (3.5ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" ORDER BY "tracks"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (45.4ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "album", "artist", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "one"], ["album", "Metallica"], ["artist", "Metallica"], ["created_at", "2017-09-16 16:22:09.496045"], ["updated_at", "2017-09-16 16:22:09.496045"]]
+  [1m[35m (120.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "album", "artist", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "I only wanna be with you"], ["album", "idk"], ["artist", "volbeat"], ["created_at", "2017-09-16 16:31:56.597977"], ["updated_at", "2017-09-16 16:31:56.597977"]]
+  [1m[35m (129.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "tracks"[0m
+  [1m[36mTrack Load (1.8ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTrack Load (1.4ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTrack Load (1.3ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTrack Load (2.0ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "tracks"[0m
+  [1m[36mTrack Load (1.6ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTrack Load (1.6ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTrack Load (1.7ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[33mUPDATE "tracks" SET "album" = ?, "updated_at" = ? WHERE "tracks"."id" = ?[0m  [["album", "Dammm IDK"], ["updated_at", "2017-09-16 16:45:41.338030"], ["id", 5]]
+  [1m[35m (146.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.3ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "album", "artist", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "generic title"], ["album", "my album"], ["artist", "you"], ["created_at", "2017-09-16 16:46:51.403679"], ["updated_at", "2017-09-16 16:46:51.403679"]]
+  [1m[35m (113.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.8ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "album", "artist", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "generic title"], ["album", "my album"], ["artist", "you"], ["created_at", "2017-09-16 16:46:51.525720"], ["updated_at", "2017-09-16 16:46:51.525720"]]
+  [1m[35m (118.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "album", "artist", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "generic title"], ["album", "my album"], ["artist", "you"], ["created_at", "2017-09-16 16:46:51.650924"], ["updated_at", "2017-09-16 16:46:51.650924"]]
+  [1m[35m (118.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (16.7ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "album", "artist", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "generic title"], ["album", "my album"], ["artist", "you"], ["created_at", "2017-09-16 16:46:51.774399"], ["updated_at", "2017-09-16 16:46:51.774399"]]
+  [1m[35m (118.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "album", "artist", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "generic title"], ["album", "my album"], ["artist", "you"], ["created_at", "2017-09-16 16:46:51.914428"], ["updated_at", "2017-09-16 16:46:51.914428"]]
+  [1m[35m (140.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "album", "artist", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "generic title"], ["album", "my album"], ["artist", "you"], ["created_at", "2017-09-16 16:46:52.063290"], ["updated_at", "2017-09-16 16:46:52.063290"]]
+  [1m[35m (126.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "album", "artist", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "generic title"], ["album", "my album"], ["artist", "you"], ["created_at", "2017-09-16 16:46:52.195755"], ["updated_at", "2017-09-16 16:46:52.195755"]]
+  [1m[35m (140.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "album", "artist", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "generic title"], ["album", "my album"], ["artist", "you"], ["created_at", "2017-09-16 16:46:52.340520"], ["updated_at", "2017-09-16 16:46:52.340520"]]
+  [1m[35m (116.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "album", "artist", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "generic title"], ["album", "my album"], ["artist", "you"], ["created_at", "2017-09-16 16:46:52.462962"], ["updated_at", "2017-09-16 16:46:52.462962"]]
+  [1m[35m (116.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "album", "artist", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "generic title"], ["album", "my album"], ["artist", "you"], ["created_at", "2017-09-16 16:46:52.585201"], ["updated_at", "2017-09-16 16:46:52.585201"]]
+  [1m[35m (115.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tracks"[0m
+Started GET "/tracks" for 127.0.0.1 at 2017-09-16 12:50:30 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/application
+  [1m[36mTrack Load (0.8ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered tracks/index.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 987ms (Views: 952.1ms | ActiveRecord: 3.2ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlaylists (20170916205553)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "playlists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "number_of_votes" integer)[0m
+  [1m[35mSQL (18.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170916205553"]]
+  [1m[35m (152.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-09-16 17:00:06 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/nyli/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/nyli/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (7.4ms)
+Completed 200 OK in 153ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2017-09-16 17:00:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/playlists"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/playlists" for 127.0.0.1 at 2017-09-16 17:03:31 -0400
+  
+ActionController::RoutingError (uninitialized constant PlaylistsController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/playlists" for 127.0.0.1 at 2017-09-16 17:19:38 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  Rendered playlists/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1334ms (Views: 1327.9ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2017-09-16 17:29:00 -0400
+Processing by PlaylistsController#index as HTML
+Completed 500 Internal Server Error in 16ms
+
+
+  
+NoMethodError (undefined method `<' for nil:NilClass):
+  
+app/controllers/playlists_controller.rb:5:in `index'
+Started GET "/playlists" for 127.0.0.1 at 2017-09-16 17:29:43 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  Rendered playlists/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3984ms (Views: 3844.0ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2017-09-16 17:39:02 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mPlaylist Load (1.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  Rendered playlists/index.html.erb within layouts/application (50.6ms)
+Completed 200 OK in 134ms (Views: 123.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2017-09-16 17:39:15 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mPlaylist Load (0.6ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  Rendered playlists/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 96ms (Views: 85.9ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (58.2ms)[0m  [1m[32mINSERT INTO "playlists" DEFAULT VALUES[0m
+  [1m[35m (151.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.4ms)[0m  [1m[32mINSERT INTO "playlists" ("name", "number_of_votes") VALUES (?, ?)[0m  [["name", "StanwoodPlaylist"], ["number_of_votes", 1]]
+  [1m[35m (160.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPlaylist Load (0.9ms)[0m  [1m[34mSELECT  "playlists".* FROM "playlists" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/playlists" for 127.0.0.1 at 2017-09-16 17:43:43 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mPlaylist Load (0.7ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  Rendered playlists/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 99ms (Views: 87.8ms | ActiveRecord: 2.7ms)
+
+
+  [1m[35m (166.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (55.7ms)[0m  [1m[32mINSERT INTO "playlists" DEFAULT VALUES[0m
+  [1m[35m (180.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (34.7ms)[0m  [1m[32mINSERT INTO "playlists" ("name", "number_of_votes") VALUES (?, ?)[0m  [["name", "Lista Genial"], ["number_of_votes", 5]]
+  [1m[35m (179.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/playlists" for 127.0.0.1 at 2017-09-16 17:48:42 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mPlaylist Load (1.5ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  Rendered playlists/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 115ms (Views: 95.8ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/playlists/show" for 127.0.0.1 at 2017-09-16 17:49:40 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mPlaylist Load (1.0ms)[0m  [1m[34mSELECT  "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 81ms (ActiveRecord: 7.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Playlist with 'id'=show):
+  
+app/controllers/playlists_controller.rb:10:in `show'
+Started GET "/playlists/1" for 127.0.0.1 at 2017-09-16 17:49:53 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (1.0ms)[0m  [1m[34mSELECT  "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 328ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionController::UnknownFormat (PlaylistsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/playlists/1" for 127.0.0.1 at 2017-09-16 17:53:15 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (1.4ms)[0m  [1m[34mSELECT  "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering playlists/show.html.erb within layouts/application
+  Rendered playlists/show.html.erb within layouts/application (11.8ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <p>
+    2:   <strong>Name</strong>
+    3:   <%= @playlist.name%>
+    4: </p>
+  
+app/views/playlists/show.html.erb:3:in `_app_views_playlists_show_html_erb__1105083279780252709_69874461348500'
+Started GET "/playlists/show" for 127.0.0.1 at 2017-09-16 17:53:54 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT  "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Playlist with 'id'=show):
+  
+app/controllers/playlists_controller.rb:10:in `show'
+Started GET "/playlists/show" for 127.0.0.1 at 2017-09-16 17:56:12 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mPlaylist Load (0.4ms)[0m  [1m[34mSELECT  "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 25ms (ActiveRecord: 3.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Playlist with 'id'=show):
+  
+app/controllers/playlists_controller.rb:10:in `show'
+Started GET "/playlists/1" for 127.0.0.1 at 2017-09-16 17:56:18 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlaylist Load (1.2ms)[0m  [1m[34mSELECT  "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering playlists/show.html.erb within layouts/application
+  Rendered playlists/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 133ms (Views: 114.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/playlists/2" for 127.0.0.1 at 2017-09-16 17:56:25 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlaylist Load (0.7ms)[0m  [1m[34mSELECT  "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering playlists/show.html.erb within layouts/application
+  Rendered playlists/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 108ms (Views: 96.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/playlists/2" for 127.0.0.1 at 2017-09-16 18:07:19 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlaylist Load (1.3ms)[0m  [1m[34mSELECT  "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering playlists/show.html.erb within layouts/application
+  Rendered playlists/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 113ms (Views: 99.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/playlists/" for 127.0.0.1 at 2017-09-16 18:07:25 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mPlaylist Load (0.6ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  Rendered playlists/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 119ms (Views: 106.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2017-09-16 18:07:34 -0400
+Processing by PlaylistsController#new as HTML
+  Rendering playlists/new.html.erb within layouts/application
+  Rendered playlists/new.html.erb within layouts/application (14.7ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@playlist) do |f| %>
+    2: 
+    3: <% end   %>
+  
+app/views/playlists/new.html.erb:1:in `_app_views_playlists_new_html_erb__3636489066710313195_69874456436680'
+Started GET "/playlists/new" for 127.0.0.1 at 2017-09-16 18:07:56 -0400
+Processing by PlaylistsController#new as HTML
+  Rendering playlists/new.html.erb within layouts/application
+  Rendered playlists/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 122ms (Views: 90.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2017-09-16 18:09:32 -0400
+Processing by PlaylistsController#new as HTML
+  Rendering playlists/new.html.erb within layouts/application
+  Rendered playlists/new.html.erb within layouts/application (132.0ms)
+Completed 200 OK in 237ms (Views: 227.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2017-09-16 18:25:36 -0400
+Processing by PlaylistsController#new as HTML
+  Rendering playlists/new.html.erb within layouts/application
+  Rendered playlists/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 105ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2017-09-16 18:26:46 -0400
+Processing by PlaylistsController#new as HTML
+  Rendering playlists/new.html.erb within layouts/application
+  Rendered playlists/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/media/nyli/GeekStuff/Documents/IT stuff/Platzy stuff/Ruby-on-Rails/music-app-nyli1/music-app-nyli1/app/views/playlists/new.html.erb:8: syntax error, unexpected '=', expecting keyword_end
+'.freeze;   =f.submit
+             ^
+/media/nyli/GeekStuff/Documents/IT stuff/Platzy stuff/Ruby-on-Rails/music-app-nyli1/music-app-nyli1/app/views/playlists/new.html.erb:11: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/playlists/new.html.erb:8: syntax error, unexpected '=', expecting keyword_end
+app/views/playlists/new.html.erb:11: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/playlists/new" for 127.0.0.1 at 2017-09-16 18:27:11 -0400
+Processing by PlaylistsController#new as HTML
+  Rendering playlists/new.html.erb within layouts/application
+  Rendered playlists/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 93ms (Views: 81.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/playlists" for 127.0.0.1 at 2017-09-16 18:27:42 -0400
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for PlaylistsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/playlists" for 127.0.0.1 at 2017-09-16 18:38:06 -0400
+Processing by PlaylistsController#index as HTML
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mPlaylist Load (0.5ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  Rendered playlists/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 139ms (Views: 120.8ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2017-09-16 18:38:13 -0400
+Processing by PlaylistsController#new as HTML
+  Rendering playlists/new.html.erb within layouts/application
+  Rendered playlists/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 82ms (Views: 75.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/playlists" for 127.0.0.1 at 2017-09-16 18:38:20 -0400
+Processing by PlaylistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/NpmXG+DM1B/oSue2bkzm8eEIq3W3NH//dJmRCMOpQpwzeKMaULuYCTB18wrD56LcWuStpJinyme84ruxv9BSQ==", "playlist"=>{"name"=>"Otra lista", "number_of_votes"=>"4"}, "commit"=>"Create Playlist"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (46.3ms)[0m  [1m[32mINSERT INTO "playlists" ("name", "number_of_votes") VALUES (?, ?)[0m  [["name", "Otra lista"], ["number_of_votes", 4]]
+  [1m[35m (192.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/playlists/5
+Completed 302 Found in 254ms (ActiveRecord: 239.0ms)
+
+
+Started GET "/playlists/5" for 127.0.0.1 at 2017-09-16 18:38:21 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlaylist Load (12.7ms)[0m  [1m[34mSELECT  "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering playlists/show.html.erb within layouts/application
+  Rendered playlists/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 227ms (Views: 186.6ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/playlists/5" for 127.0.0.1 at 2017-09-16 19:22:03 -0400
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlaylist Load (806.4ms)[0m  [1m[34mSELECT  "playlists".* FROM "playlists" WHERE "playlists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering playlists/show.html.erb within layouts/application
+  Rendered playlists/show.html.erb within layouts/application (571.0ms)
+Completed 200 OK in 16463ms (Views: 14965.7ms | ActiveRecord: 806.4ms)
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2017-09-16 19:50:57 -0400
+Processing by PlaylistsController#new as HTML
+  Rendering playlists/new.html.erb within layouts/application
+  Rendered playlists/new.html.erb within layouts/application (469.8ms)
+Completed 200 OK in 3084ms (Views: 2361.4ms | ActiveRecord: 68.2ms)
+
+
+Started POST "/playlists" for 127.0.0.1 at 2017-09-16 19:52:27 -0400
+Processing by PlaylistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5TNroKC2BNBEdBKqgnzJIT2NKR2hSRNimm2Eg0iDXm1pJO9wpnfZ4B8U7vhwymQxi2KZBuX3XbT5TGgprXK6Lg==", "playlist"=>{"name"=>"", "number_of_votes"=>""}, "commit"=>"Create Playlist"}
+  [1m[35m (14.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering playlists/new.html.erb within layouts/application
+  Rendered playlists/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 401ms (Views: 233.1ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/tracks/new" for 127.0.0.1 at 2017-09-16 19:55:22 -0400
+Processing by TracksController#new as HTML
+  Rendering tracks/new.html.erb within layouts/application
+  Rendered tracks/_form.html.erb (62.7ms)
+  Rendered tracks/new.html.erb within layouts/application (104.5ms)
+Completed 200 OK in 401ms (Views: 209.3ms | ActiveRecord: 47.9ms)
+
+
+Started POST "/tracks" for 127.0.0.1 at 2017-09-16 19:55:27 -0400
+Processing by TracksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AZpWeWPM13Jjtxrpw8FUgmlwKAw3hAvdYhko9aLpdo6NjdKpZQ0KQjjX5rsxd/mS35+YF3M6RQsBOMRfRxiSzQ==", "track"=>{"title"=>"", "album"=>"", "artist"=>""}, "commit"=>"Create Track"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (11.6ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tracks/new.html.erb within layouts/application
+  Rendered tracks/_form.html.erb (56.5ms)
+  Rendered tracks/new.html.erb within layouts/application (92.9ms)
+Completed 200 OK in 1894ms (Views: 1863.5ms | ActiveRecord: 11.7ms)
+
+
