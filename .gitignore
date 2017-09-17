@@ -1,0 +1,14 @@
+#ignore bundler config
+/.bundle
+
+#ignore sqlite default database
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+#ignore all logfiles and tempfiles
+/log/*
+!/log/.keep
+/tmp
+
+#ignore secrets
+config/application.yml

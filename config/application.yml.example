@@ -1,0 +1,5 @@
+development:
+  SUPER_SECRET_KEY: 'LLAVE AQIO'
+  SUPER_SECRET_ID: 'ID_FALSO'
+
+  
