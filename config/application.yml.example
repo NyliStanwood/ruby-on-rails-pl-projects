@@ -1,5 +1,5 @@
+#please delete application.yml.example extention to have it as 'application.yml"
+
 development:
   SUPER_SECRET_KEY: 'LLAVE AQIO'
   SUPER_SECRET_ID: 'ID_FALSO'
-
-  
