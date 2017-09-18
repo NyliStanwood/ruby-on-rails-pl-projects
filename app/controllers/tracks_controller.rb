@@ -4,6 +4,7 @@ class TracksController < ApplicationController
   # GET /tracks
   # GET /tracks.json
   def index
+    #es el listado de todos los elementos
     @tracks = Track.all
   end
 
