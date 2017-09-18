@@ -3,3 +3,6 @@
 development:
   SUPER_SECRET_KEY: 'LLAVE AQIO'
   SUPER_SECRET_ID: 'ID_FALSO'
+  
+   spotify_client_id: aaabbbbaaaaabbbbb
+   spotify_client_secret: aaaaabbbbbaaaaabbbb
