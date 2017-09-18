@@ -2,7 +2,8 @@ class SpotifyController < ApplicationController
   def search
     title = params[:title]
     if title
-      @results =  RSpotify::Artist.search(title)
+      #@results =  RSpotify::Artist.search(title)
+      @results = RSpotify::Track.search(title)
     end
 
     # Access tracks' audio features
