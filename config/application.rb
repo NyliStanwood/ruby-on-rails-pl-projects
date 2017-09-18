@@ -18,9 +18,9 @@ module MusicAppNyli1
     # config/application.rb
     RSpotify::authenticate(ENV['spotify_client_id'] , ENV['spotify_client_secret'])
 
-    puts "module MusicApp class Application values:"
-    puts ENV['spotify_client_id']
-    secret = ENV['spotify_client_secret']
-    puts secret
+    #puts "module MusicApp class Application values:"
+    #puts ENV['spotify_client_id']
+    #secret = ENV['spotify_client_secret']
+    #puts secret
   end
 end
