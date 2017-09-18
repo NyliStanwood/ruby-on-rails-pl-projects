@@ -1,4 +1,6 @@
 class PlaylistsController < ApplicationController
+  #before_action :set_track, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
   def index
       #here the values that we will share with view index
       #we add all the playlist object to instanceVariable
